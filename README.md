@@ -23,7 +23,7 @@ ln pingchart.py /usr/local/bin/pingchart
 
 ##Usage
 ```bash
-pingchart [\<url\>] [\<max lines to display\>]
+pingchart [<url>] [<max lines to display>]
 ```
 
 By default, pingchart will ping google.com, and it will display enough lines such that a finished command will fill the terminal window.
