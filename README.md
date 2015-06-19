@@ -29,3 +29,7 @@ pingchart [\<url\>] [\<max lines to display\>]
 By default, pingchart will ping google.com, and it will display enough lines such that a finished command will fill the terminal window.
 
 The chart will display the last \<max lines\> results, but it won't stop pinging when it reaches \<max lines\>, only when quit using ^C.
+
+##Note
+
+This has been tested only on OS X 10.10.4 using zsh.
