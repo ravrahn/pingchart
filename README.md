@@ -21,6 +21,9 @@ chmod 755 pingchart.py
 ln pingchart.py /usr/local/bin/pingchart
 ```
 
+###Dependancies
+pingchart requires Python 3 and uses the `sh` and `blessings` libraries, both available on pip.
+
 ##Usage
 ```bash
 pingchart [<url>] [<max lines to display>]
