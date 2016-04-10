@@ -2,17 +2,17 @@
 Graphical representation of ping.
 
 Sample output:
-```
-$ pingchart python.org 4                                    
-Pinging python.org (104.130.43.121)
-█████████ 295 ms
-██████████ 314 ms
+<pre>
+Pinging <b>python.org</b> (104.130.43.121)
 ███████ 237 ms
-███████████ 354 ms^C
-sent 10 packets
-0.00% packet loss
-352.50 ms average ping
-```
+█████████ 348 ms
+██████████ 368 ms
+██████████ 388 ms^C
+<b>10</b> packets sent, <b>10</b> packets received
+<b>0.00%</b> packet loss
+<b>307.80</b> ms average ping
+<b>233</b> ms lowest, <b>419</b> ms highest
+</pre>
 
 ##Installation
 Go to the pingchart directory in the terminal and run:
@@ -22,7 +22,7 @@ ln pingchart.py /usr/local/bin/pingchart
 ```
 
 ###Dependancies
-pingchart requires Python 3 and uses the `sh` and `blessings` libraries, both available on pip.
+pingchart requires Python 3 and uses the `sh` and `blessings` libraries, both available on pip. It also requires the `dig` command, which is often preinstalled. If not, it is available in the package `dnsutils` on apt.
 
 ##Usage
 ```bash
@@ -33,6 +33,8 @@ By default, pingchart will ping google.com, and it will display enough lines suc
 
 The chart will display the last \<max lines\> results, but it won't stop pinging when it reaches \<max lines\>, only when quit using ^C.
 
-##Note
+##Notes
 
-This has been tested only on OS X 10.10.4 using zsh.
+* This has been tested on OS X 10.10 with iTerm and Terminal, running zsh, bash, and csh. It has also been tested on a Raspberry Pi on zsh and bash via SSH on iTerm.
+* This command can only be run in a terminal. It is not designed to work if stdout is not a terminal. This includes piping and outputting to a file. Please use the regular `ping` command for those.
+* If you encounter a Unicode error when running the command, try writing `PYTHONIOENCODING=utf-8` before the pingchart command. If your terminal can't display unicode, you can't use this program.
